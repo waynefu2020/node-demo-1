@@ -25,8 +25,8 @@ if(!port){
     response.statusCode = 200;
     response.setHeader('Content-Type', 'text/html;charset=utf-8');
     response.write(`
-      <link rel="stylesheet" href=" ./style.css">
-      <h1>你好</h1>
+      <link rel="stylesheet" href=" /style.css">
+      <h1>whoami</h1>
     `);
     response.end();
   } else if(path === '/style.css'){
@@ -37,7 +37,7 @@ if(!port){
   } else {
     response.statusCode = 404;
     response.setHeader("Content-Type", "text/html; charset=utf-8");
-    response.write("<h1>你输入的路径不存在对应的内容</h1>");
+    response.write("<h1>你访问的页面不存在</h1>");
     response.end();
   }
 
