@@ -25,8 +25,13 @@ if(!port){
     response.statusCode = 200;
     response.setHeader('Content-Type', 'text/html;charset=utf-8');
     response.write(`
-      <link rel="stylesheet" href=" /style.css">
-      <h1>whoami</h1>
+      <!DOCTYPE html>
+      <head>
+        <link rel="stylesheet" href="/style.css">
+      </head>
+      <body>
+        <h1>hello</h1>
+      </body>
     `);
     response.end();
   } else if(path === '/style.css'){
@@ -45,5 +50,5 @@ if(!port){
 })
 
 server.listen(port);
-console.log('监听 ' + port + ' 成功\n请用在空中转体720度然后用电饭煲打开 http://localhost:' + port)
+console.log('监听 ' + port + ' 成功\n请在空中转体720度然后用电饭煲打开 http://localhost:' + port)
 
